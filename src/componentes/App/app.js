@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { DataTable } from '../DataTable/dataTable';
 import './app.css';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -10,8 +11,20 @@ const theme = createMuiTheme({
   },
 });
 
-
 class App extends Component {
+
+  state = {
+    data: [
+      {
+        key: 'teste key key',
+        temperature: 'test temperature',
+        umidade: 'teste de humidade',
+        cliente: 'teste client',
+        data: 'teste key data'
+      }
+    ]
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
@@ -23,6 +36,7 @@ class App extends Component {
               </Typography>
             </Toolbar>
           </AppBar>
+          <DataTable data={this.state.data}/>
         </React.Fragment>
       </MuiThemeProvider>
     );

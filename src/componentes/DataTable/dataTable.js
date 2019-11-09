@@ -1,8 +1,8 @@
-import React, { Component } from 'React';
+import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@material-ui/core';
 
 export const DataTable = ({ data }) => {
-    return <React.Fragement>
+    return <React.Fragment>
         <Typography variant='headline' component='h2'>Add New</Typography>
         <Table selectable={false}>
             <TableHead>
@@ -28,5 +28,5 @@ export const DataTable = ({ data }) => {
                 }
             </TableBody>
         </Table>
-    </React.Fragement>
+    </React.Fragment>
 }

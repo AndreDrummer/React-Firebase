@@ -3,17 +3,17 @@ import { DataTable } from '../DataTable/dataTable';
 import './app.css';
 import { Card, CardContent } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import red from '@material-ui/core/colors/red';
+import orange from '@material-ui/core/colors/orange';
 import FirebaseService from '../../services/firebaseServices';
 import { urls } from '../../utils/urlUtils';
-import  { Add } from '../Add/add';
+import  Add  from '../Add/add';
 import  { Welcome } from '../Welcome/welcome';
 import { Route } from 'react-router-dom';
 import { TopBar } from '../App/topBar';
 
 const theme = createMuiTheme({
   palette: {
-    primary: red,
+    primary: orange,
   },
 });
 

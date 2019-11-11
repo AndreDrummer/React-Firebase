@@ -19,9 +19,9 @@ export const DataTable = ({ data }) => {
                     data.map((item, index) =>
                         <TableRow>
                             <TableCell>{item.key}</TableCell>
-                            <TableCell>{item.temperature}</TableCell>
-                            <TableCell>{item.humidity}</TableCell>
-                            <TableCell>{item.client}</TableCell>
+                            <TableCell>{item.temperatura}</TableCell>
+                            <TableCell>{item.umidade}</TableCell>
+                            <TableCell>{item.cliente}</TableCell>
                             <TableCell>{item.data}</TableCell>
                         </TableRow>
                     )

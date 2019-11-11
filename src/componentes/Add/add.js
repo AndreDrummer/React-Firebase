@@ -4,7 +4,6 @@ import  FirebaseService from '../../services/firebaseServices';
 import { urls } from '../../utils/urlUtils';
 import { withRouter } from 'react-router-dom';
 import '../../index.css';
-import { firebaseDatabase } from '../../utils/firebaseUtils';
 
 class Add extends Component {
     submit = (event) => {
@@ -23,14 +22,7 @@ class Add extends Component {
         });
 
         this.props.history.push(urls.data.path);
-    };
-
-    static pushData = (node, objToSubmit) => {
-        const ref = firebaseDatabase.ref(node).push();
-        const id = firebaseDatabase.ref(node).push().key;
-        ref.set(objToSubmit);
-        return id;
-    }
+    };   
 
     render = () => (
     <React.Fragment>

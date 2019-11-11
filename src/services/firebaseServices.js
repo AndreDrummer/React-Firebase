@@ -16,5 +16,11 @@ export default class FirebaseService {
         return query;
     }
 
- 
+    static pushData = (node, objToSubmit) => {
+        const ref = firebaseDatabase.ref(node).push();
+        const id = firebaseDatabase.ref(node).push().key;
+        ref.set(objToSubmit);
+        return id;
+    }
+
 }

@@ -23,4 +23,8 @@ export default class FirebaseService {
         return id;
     }
 
+    static remove = (id, node) => {
+        return firebaseDatabase.ref(node + '/' + id).remove();
+    }
+
 }

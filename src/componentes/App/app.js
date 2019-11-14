@@ -3,9 +3,10 @@ import { DataTable } from '../DataTable/dataTable';
 import './app.css';
 import { Card, CardContent } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import orange from '@material-ui/core/colors/orange';
+import green from '@material-ui/core/colors/green';
 import FirebaseService from '../../services/firebaseServices';
 import { urls } from '../../utils/urlUtils';
+import { privateUrls } from '../../utils/urlUtils';
 import  Add  from '../Add/add';
 import  { Welcome } from '../Welcome/welcome';
 import { Route } from 'react-router-dom';
@@ -13,7 +14,7 @@ import { TopBar } from '../App/topBar';
 
 const theme = createMuiTheme({
   palette: {
-    primary: orange,
+    primary: green,
   },
 });
 
@@ -52,6 +53,10 @@ class App extends Component {
                 render={(props) =>
                   <Add {...props}/>}
               />
+
+              <Route exact
+                     path={privateUrls.edit.path}
+                     render={(props) => <Add {...props}/>}/>
             </CardContent>            
           </Card>
         </React.Fragment>
